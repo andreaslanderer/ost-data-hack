@@ -12,4 +12,15 @@
         - Es scheint falsch klassifizierte Daten zu geben:
         ![alt text](images/scatter_obesity.png)
 
+    - 1. Ansatz - erster Schnappschuss "wo stehen wir" / Funktioniert ein Modell
+      - Split Train in Train und Validationset
+
+      - Einfacher Decision tree ohne Hyperparameter
+        <br>Accuracy ~83%
+        ![alt text](images/1_approach_decision_tree.png)
+      - Confusion Matrix
+        ![alt text](images/1_approach_confusion_matrix.png)
+
+
+
         
