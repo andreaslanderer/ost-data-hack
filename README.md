@@ -5,6 +5,7 @@
 ### Daten Visualisieren
   #### Erkenntnisse:
   - Anzahl Datenpunkte 20758
+  - sauberes Datenset - keine N/A's und kein null values
   - Frauen scheinen tendenziell eher die höchsten Gewichte abzudecken, Männer in der Körperhöhe
     
     ![alt text](images/scatter_male_female.png)
@@ -30,7 +31,7 @@
 - Aggregierte Spalte "BMI" einführen - histplot bmi/category
 
     ![alt text](images/bmi_category_histplot.png)
-- id Column droppen
+- Columns mit niedriger Feature importance gedropt
 - Findings:
   - Falsch gelabelte Daten (Extremfälle):
       | is | predicted | BMI|
@@ -46,3 +47,7 @@
   - split Train 80% / Test 20%, random_seed=42
   - Decision Tree: Gridsearch max_depth=10, main_samples_leave=1, split=2 Score 86.5
   - RandomForrest( Est. 200 ) Score 90.2
+
+## Mögliche weitere Schritte
+  - Abwägen ob Outliers bereinigen
+   
