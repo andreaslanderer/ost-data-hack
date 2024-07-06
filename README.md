@@ -20,13 +20,23 @@
     ![alt text](images/1_approach_decision_tree.png)
   - Confusion Matrix
     ![alt text](images/1_approach_confusion_matrix.png)
-
   
 - Aggregierte Spalte "BMI" einführen
   - histplot bmi/category
     ![alt text](images/bmi_category_histplot.png)
 
+## Daten bereinigen
+- BMI in Dataset aggregiert (Gewicht / Höhe^2)
+- id Column droppen
 
+## Feature Selection
+- Standardisieren -> Modell Accuracy hat sich verschlechtert
 
+## Model
+  - Decision Tree: Gridsearch max_depth=10, main_samples_leave=1, split=2 Score 86.5
+  - RandomForrest( Est. 200 ) Score 90.2
 
-        
+## Parameter Documentation
+- Hyperparameter
+- Seed
+- Stats
