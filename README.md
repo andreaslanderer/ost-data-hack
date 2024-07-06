@@ -2,34 +2,37 @@
 
 ## Vorgehen
 
-- Daten Visualisieren
-    - Erkenntnisse:
-        - Anzahl Datenpunkte 20758
-        - Frauen scheinen tendenziell eher die höchsten Gewichte abzudecken, Männer in der Körperhöhe
-        ![alt text](images/scatter_male_female.png)
-        - Verteilung über die Obesity Klassen über alle Daten:
-        ![alt text](images/histplot.png)
-        - Es scheint falsch klassifizierte Daten zu geben:
-        ![alt text](images/scatter_obesity.png)
+### Daten Visualisieren
+  #### Erkenntnisse:
+  - Anzahl Datenpunkte 20758
+  - Frauen scheinen tendenziell eher die höchsten Gewichte abzudecken, Männer in der Körperhöhe
+    
+    ![alt text](images/scatter_male_female.png)
+  - Verteilung über die Obesity Klassen über alle Daten:
+  
+    ![alt text](images/histplot.png)
+  - Es scheint falsch klassifizierte Daten zu geben:
+  
+    ![alt text](images/scatter_obesity.png)
 
-- 1. Ansatz - erster Schnappschuss "wo stehen wir" / Funktioniert ein Modell
+### 1. Ansatz - erster Schnappschuss "wo stehen wir" / Funktioniert ein Modell
   - Split Train in Train und Validationset
 
   - Einfacher Decision tree ohne Hyperparameter
     <br>Accuracy ~83%
-    ![alt text](images/1_approach_decision_tree.png)
+    
+      ![alt text](images/1_approach_decision_tree.png)
   - Confusion Matrix
-    ![alt text](images/1_approach_confusion_matrix.png)
   
-- Aggregierte Spalte "BMI" einführen
-  - histplot bmi/category
-    ![alt text](images/bmi_category_histplot.png)
+    ![alt text](images/1_approach_confusion_matrix.png)
 
 ## Daten bereinigen
-- BMI in Dataset aggregiert (Gewicht / Höhe^2)
+- Aggregierte Spalte "BMI" einführen - histplot bmi/category
+
+    ![alt text](images/bmi_category_histplot.png)
 - id Column droppen
 - Findings:
-  - Falsch gelabelte Daten:
+  - Falsch gelabelte Daten (Extremfälle):
       | is | predicted | BMI|
       |:------------- |:---------------:| -------------:|
       | Obesity_Type_I    | Insufficient_Weight  | 17.10 |
@@ -39,11 +42,7 @@
 ## Feature Selection
 - Standardisieren -> Modell Accuracy hat sich verschlechtert
 
-## Model
+## Model (and Parameter Documentation)
+  - split Train 80% / Test 20%, random_seed=42
   - Decision Tree: Gridsearch max_depth=10, main_samples_leave=1, split=2 Score 86.5
   - RandomForrest( Est. 200 ) Score 90.2
-
-## Parameter Documentation
-- Hyperparameter
-- Seed
-- Stats
