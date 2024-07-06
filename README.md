@@ -44,10 +44,11 @@
 - Standardisieren -> Modell Accuracy hat sich verschlechtert
 
 ## Model (and Parameter Documentation)
-  - split Train 80% / Test 20%, random_seed=42
-  - Decision Tree: Gridsearch max_depth=10, main_samples_leave=1, split=2 Score 86.5
-  - RandomForrest( Est. 200 ) Score 90.2
+- split Train 80% / Test 20%, random_seed=42
+- Decision Tree: Gridsearch max_depth=10, main_samples_leave=1, split=2 Score 86.5
+- RandomForrest( Est. 200 ) Score 90.2 (auf Validatierungsset) - Auf Testset 90.1
 
-## Mögliche weitere Schritte
-  - Abwägen ob Outliers bereinigen
-   
+## Mögliche weitere Schritte / Erkenntisse
+ - Abwägen ob Outliers bereinigen
+ - In der Confusion Matrix scheinen sich 2 Cluster abzubilden - Woher kommt das?
+ - Selbe Accuracy mit einfacherem oder anderem Modell möglich?
