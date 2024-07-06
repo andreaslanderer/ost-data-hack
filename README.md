@@ -28,6 +28,13 @@
 ## Daten bereinigen
 - BMI in Dataset aggregiert (Gewicht / Höhe^2)
 - id Column droppen
+- Findings:
+  - Falsch gelabelte Daten:
+      | is | predicted | BMI|
+      |:------------- |:---------------:| -------------:|
+      | Obesity_Type_I    | Insufficient_Weight  | 17.10 |
+      | Obesity_Type_II   | Normal_Weight        | 24.39 |
+      | Obesity_Type_III  | Overweight_Level_I   | 25.91 |
 
 ## Feature Selection
 - Standardisieren -> Modell Accuracy hat sich verschlechtert
